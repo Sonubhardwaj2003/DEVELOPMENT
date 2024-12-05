@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+           padding: 5px; 
+           margin: 0px;
+        } */
+    .form{
+        background-color: beige;
+        display: flex;
+        flex-direction: row;
+       justify-content:center;
+       font-size: 26px;
+    }
+    #button{
+        font-size: 30px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div > 
+        <FORM class="form"  >
+
+            <fieldset >
+                <legend>
+                    <h1 >RESIGRATION FORM</h1>
+                </legend>
+
+                <label for="name" >Name : </label>
+                <input type="text" id="name" placeholder="last name"/>
+                <input type="text" id="name" placeholder="first name"/>
+                <br>
+                <br>
+                <label for="passward" >Passward: </label>
+                <input type="password" id="passward"/>
+                <br>
+                <br>
+                <label for="email" >E-mail     : </label>
+                <input type="email" id="email"/>
+                <br>
+                <br>
+                <label for="number" >Mobile Number : </label>
+                <input type="number" id="number"/>
+                <br>
+                <br>
+
+                <label for="gender" >Gender : </label>
+                <br>
+                <label for="male" >Male : </label>
+                <input type="radio" name="male" id="male" value="1">
+                <label for="female" >Female : </label>
+                <input type="radio" name="female" id="female" value="2">
+                <label for="other" >Other : </label>
+                <input type="radio" name="other" id="other" value="3">
+                <br>
+                <br>
+
+                <label for="birthday">D.O.B:</label>
+                <input type="date" id="birthday" name="birthday">
+                <br>
+                <br>
+                 <label for="language">Language :</label>
+                 <br>
+                <input type="checkbox" id="a" >
+                <label for="a" >HINDI</label>
+                <br>
+                <input type="checkbox" id="b" >
+                <label for="b" > ENGLISH </label>
+                <br>
+                <input type="checkbox" id="c" >
+                <label for="c" >TAMIL  </label>
+                <br>
+                <input type="checkbox" id="d" >
+                <label for="d" >MARATHI </label>
+                <br>
+                <input type="checkbox" id="e" >
+                <label for="e" >PUNJABI  </label>
+                <br>
+                <input type="checkbox" id="f" >
+                <label for="f" >TELGU </label>
+                <br>
+                <input type="checkbox" id="g" >
+                <label for="g" >GUJRATI </label>
+                <br>
+                <input type="TEXT" id="f" >
+                <label for="f" >OTHER </label>
+                <br>
+                <br>
+                <label for="address">Address : </label>
+                <br>
+                <textarea name="addresss" id="address"></textarea>
+                <br>
+                <br>
+               <button id="button" >Register</button>
+            </fieldset>
+        </FORM>
+    </div>
+</body>
+</html>

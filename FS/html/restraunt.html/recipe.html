@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navcontainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .logo_section{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #heading{
+           font-size: 40px;
+        }
+        #image1{
+            border-radius: 100px;
+            width: 100px;
+        }
+        table tr ol{
+            list-style: none;
+        }
+        .about_section a{
+           text-decoration: none;
+           margin: 10px;
+           font-size: 20px;
+        }
+        #img_section img{
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navcontainer">
+            <div class="logo_section">
+                <img src="resturant.jpeg" alt="food" id="image1">
+                <h1 id="heading" align="center">Punjabi Food's</h1>
+            </div>
+
+            <div class="about_section">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <table border-collapse: collapse;>
+                <thead>
+                    <th>Dishes Name</th>
+                    <th>Prices</th>
+                </thead>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Noodles</li>
+                            <li>Mango Shake</li>
+                            <li>Cold coffee</li>
+                            <li>Gulabjuman</li>
+                            <li>Burfi</li>
+                        </ul>
+                    </td>
+                    <td >
+                        <ol>
+                            <li>150 perplate</li>
+                            <li>80 per glass</li>
+                            <li>100 per galss</li>
+                            <li>20 per piece</li>
+                            <li>50 per piece</li>
+                        </ol>
+                    </td>
+                    <td id="img_section">
+                        <img src="noodles.jpeg" alt="">
+                        <img src="mangoshake.jpeg" alt="">
+                        <img src="coldcoffie.jpeg" alt="">
+                        <img src="gulab jamun.jpeg" alt="">
+                        <img src="burfi image.jpeg" alt="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
