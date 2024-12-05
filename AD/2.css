@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Project{
+    height: 99%;
+    width: 100%;
+    background-color: rgb(237, 242, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* navcontainer start */
+.navcontainer{
+    width: 100%;
+   background-color: rgb(218, 244, 252);
+}
+#navlist{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(60, 137, 236);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navheader{
+    display: flex;
+    flex-direction: row;
+}
+.navheader h1{
+    align-self: center;
+    font-size: 30px;
+}
+.navheader img{
+    border-radius: 50px;
+}
+.navmain{
+    display: none;
+}
+@media (min-width:900px) {
+    .navmain{
+        display: flex;
+    }
+}
+.navmain a {
+    text-decoration: none;
+    color: rgb(245, 238, 238);
+    font-size: 20px;
+    padding: 10px;
+    
+}
+.navfooter{
+    display: none;
+}
+@media (min-width:900px) {
+    .navfooter{
+        display:flex;
+    }
+}
+.navfooter a {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(55, 55, 218);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.menubutton{
+    border-radius: 50px;
+    display: none;
+}
+.menu-icon{
+    border-radius: 40px;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+@media (max-width:900px) {
+    .menubutton{
+        display:flex;
+    }
+}
+/* navcontainer end */
+#header{
+    text-align: center;
+    margin: 25px;
+    /* color: rgb(237, 68, 16); */
+    color: rgb(25, 60, 236);
+    color: linear-gradient(90deg, rgba(232,61,85,1) 23%, rgba(232,73,113,0.924829306722689) 63%, rgba(231,63,34,1) 97%);
+    font-size: 80px;
+
+}
+#sport{
+    width:95%;
+    height:1000px;
+    box-shadow: 4px 4px black;
+    
+}
+.image1{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.motivation{
+    margin-left: 30%;
+    margin-bottom: 30PX;
+    margin-top: 50PX;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#motivation{
+    font-size: 25px;
+}
+.button1{
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items: center;
+}
+#button1 {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    align-items: center;
+    border-radius: 2px;
+    background-color: beige;
+    box-shadow: 4px 4px rgb(237, 238, 196);
+}
+#button1 p{
+    font-size: 20px;
+}
+.down{
+    margin: 50px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    width: 95%;
+    padding: 30px;
+    background-color: rgb(131, 195, 226);
+}
+.down h3{
+    font-size: 25px;
+}
+.down button{
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: rgb(113, 113, 243);
+}
+/* footer-container */
+.footer-container{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
+}
+.footer-box{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+    margin-bottom: 3rem;
+    gap: 3rem;
+    border-radius: 5px;
+    background-color: rgb(184, 146, 108);
+}
+.left-footer-box{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.study-footer{
+    display: flex;
+    flex-direction: row;
+}
+.study-footer img{
+    width: 50px;
+    border-radius: 50px;
+}
+.study-footer h2{
+    display: flex;
+    align-self: center;
+}
+.left-footer-box p{
+    margin: 20px;
+    margin-left: 0px;
+}
+.logo-section img{
+    width:30px;
+    filter: grayscale(1.5);
+    border-radius: 50px;
+}
+.right-footer-box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 6rem;
+    list-style: none;
+}
+
+.right-footer-box h3{
+    margin-bottom: 2rem;
+}
+.right-footer-box li{
+    margin-bottom: 1rem;
+}
+.footercopywrite{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+

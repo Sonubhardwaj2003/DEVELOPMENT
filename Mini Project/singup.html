@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .signup{
+            background-color: rgb(43, 42, 40);
+            width:100vw;
+            height: 51.7vw;
+            display: flex;
+            justify-content: center;
+            /* align-content: center; */
+            align-items: center;
+            /* margin: 0px; */
+        }
+        .form{
+            background-color: rgb(220, 241, 234);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgb(247, 247, 247),-2px -2px 5px rgb(247, 247, 247)  ;
+            /* box-shadow: -2px -2px 5px rgb(247, 247, 247); */
+            font-size: 25px;
+            text-align: right;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            /* align-self: center; */
+        }
+        #button{
+            font-size: 22px;
+            padding: 7px;
+            border-radius: 5px;
+        }
+        input{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="signup"> 
+        <FORM class="form"  >
+            <div>
+                <label for="name" >Name : </label>
+                <input type="text" id="name" />
+                <!-- <input type="text" id="name" placeholder="first name"/> -->
+                <br>
+                <br>
+                <label for="username" > Username  : </label>
+                <input type="text" id="username"/>
+                <br>
+                <br>
+                <label for="number" >Addmission Number : </label>
+                <input type="text" id="number"/>
+                <br>
+                <br>
+                <label for="passward" >Passward: </label>
+                <input type="password" id="passward"/>
+                <br>
+                <br>
+                
+            </div>
+
+              <div class="button">
+
+                  <button id="button" >Signup</button>
+               
+              </div>  
+        </FORM>
+    </div>
+</body>
+</html>
