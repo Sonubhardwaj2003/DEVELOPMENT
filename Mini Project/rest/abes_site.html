@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abeses</title>
+    <link rel="stylesheet" href="site.css">
+    <script> 
+        function navigateToLink() 
+        { const selectElement = document.getElementById("linkSelect");
+         const selectedOption = selectElement.options[selectElement.selectedIndex].value;
+          if (selectedOption) {
+             window.location.href = selectedOption; }
+        } 
+        </script>
+</head>
+
+<body>
+    <div class="Project">
+        <div class="navcontainer">
+            <nav id="navlist">
+
+                <div class="navheader">
+                    <img src="abes logo image.jpg" height="100px" width="100px" />
+                    <h1>ABES ENGINERRING COLLEGE</h1>
+                </div>
+
+                <div class="navmain">
+                    <a href="abes_site.html">Home</a>
+                    <a>
+                        <select id="linkSelect" onchange="navigateToLink()">
+                            <option value="http://192.168.1.26/questionpapers/" class="pyq">Previous Year</option>
+                            <option value="https://abes.ac.in/library.php" class="pyq">Library</option>
+                        </select>
+                    </a>
+                    <a href="https://aktu.ac.in/syllabus.html">Syllabus</a>
+                    <a href="departments.html">Departments</a>
+                    <a href="about.html">About</a>
+                </div>
+
+                <div class="navfooter">
+                    <button>
+                        <a href="singup.html">Signup </a>
+                    </button>
+                    <button>
+                        <a href="login.html">Login </a>
+                    </button>
+                </div>
+
+            </nav>
+
+            <div class="mid_abes">
+                
+                <div class="main_abes">
+    
+                    <div class="utube1">
+    
+                        <iframe width="400" height="200" src="https://www.youtube.com/embed/1wCxB8EWM0Y?si=oMN2n2iU7QGhUYdd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+                    </div>
+    
+                    <div class="utube2">
+    
+                        <iframe width="400" height="200" src="https://www.youtube.com/embed/8cugVp2N97Q?si=8C_RpqMtJCZsPpOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+                    </div>
+
+                    <div class="utube3">
+                        <!-- <iframe width="400" height="200" src="https://www.youtube.com/embed/3Er4V2mwHPw?si=i-6KocO4CyseIYM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" controls allowfullscreen></iframe> -->
+                         <!-- <iframe src="https://youtu.be/3Er4V2mwHPw?si=VhZqwHS-xpyKc6cm" width="400" height="200" frameborder="0"></iframe> -->
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+            <div class="footer-container">
+
+                <div class="footer-box">
+                    <div class="left-footer-box">
+                        <div class="study-footer">
+                            <img src="abes logo image.jpg" alt="#" id="fotterlogo" />
+                            <h2>ABESEC</h2>
+                        </div>
+                        <p>Seamless Learning for Bright Futures</p>
+                        <!-- <div class="logo-section">
+                    <img src="linkedin.jpeg" alt="#"/>
+                    <img src="google.jpeg" alt="#"/>
+                    <img src="microsoft.jpeg" alt="#" id="microsoft-image">
+                </div> -->
+                    </div>
+
+                    <div class="right-footer-box">
+                        <div class="products">
+                            <h3>Information</h3>
+                            <un>
+                                <li>Overview</li>
+                                <li>Fee structure</li>
+                                <li>Campus</li>
+                                <li>Placements</li>
+                            </un>
+                        </div>
+
+                        <div class="company">
+                            <h3>Company</h3>
+                            <un>
+                                <li>About</li>
+                                <li>Investor Relations</li>
+                                <li>Jobs</li>
+                                <!-- <li>Press</li> -->
+                                <!-- <li>Blog</li> -->
+                            </un>
+                        </div>
+
+                        <div class="support">
+                            <h3>Support</h3>
+                            <un>
+                                <li>Contact</li>
+                                <!-- <li>Documentation</li> -->
+                                <li>Chat</li>
+                                <li>FAQ</li>
+                                <li>Help</li>
+                            </un>
+                        </div>
+
+                        <div class="legal">
+                            <h3>Legal</h3>
+                            <un>
+                                <li>Terms of Service</li>
+                                <li>Privacy Policy</li>
+                                <!-- <li>Cookie Setting</li> -->
+                            </un>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

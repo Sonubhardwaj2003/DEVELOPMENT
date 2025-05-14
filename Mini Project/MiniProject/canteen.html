@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+           background-image: url(pizza.jpg);
+           background-attachment: fixed;
+           background-repeat: no-repeat;
+           background-size: 100% 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #09360a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .quantity {
+            width: 60px;
+        }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .total-price {
+            float: right;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function calculateTotal() {
+            const rows = document.querySelectorAll('tbody tr');
+            let total = 0;
+            rows.forEach(row => {
+                const price = parseFloat(row.querySelector('.price').textContent);
+                const quantity = parseInt(row.querySelector('.quantity').value);
+                total += price * quantity;
+            });
+            document.querySelector('.total-price').textContent = 'Total Price: ₹' + total.toFixed(2);
+        }
+
+        window.onload = function() {
+            const quantityInputs = document.querySelectorAll('.quantity');
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', calculateTotal);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>College Canteen Menu</h1>
+        <div class="total-price">Total Price: ₹0.00</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sandwich</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Burger</td>
+                    <td class="price">70</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td class="price">120</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pizza</td>
+                    <td class="price">150</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Fries</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Salad</td>
+                    <td class="price">80</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Ice Cream</td>
+                    <td class="price">60</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Coffee</td>
+                    <td class="price">30</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Tea</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Juice</td>
+                    <td class="price">40</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Noodles</td>
+                    <td class="price">100</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Samosa</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pakora</td>
+                    <td class="price">30</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Chaat</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Biryani</td>
+                    <td class="price">150</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Fried Rice</td>
+                    <td class="price">120</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Dosa</td>
+                    <td class="price">80</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Idli</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Paneer Tikka</td>
+                    <td class="price">120</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="buy-button" onclick="calculateTotal()">Buy</button>
+    </div>
+</body>
+</html>

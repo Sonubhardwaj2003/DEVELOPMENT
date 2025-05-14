@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Laundry Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-image: url(cloths.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #265d91;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #e34a4f;
+            color: #fff;
+        }
+        .quantity {
+            width: 60px;
+        }
+        .wash-button {
+            background-color: #e34a4f;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .total-price {
+            float: right;
+            background-color: #e34a4f;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function calculateTotal() {
+            const rows = document.querySelectorAll('tbody tr');
+            let total = 0;
+            rows.forEach(row => {
+                const price = parseFloat(row.querySelector('.price').textContent);
+                const quantity = parseInt(row.querySelector('.quantity').value);
+                total += price * quantity;
+            });
+            document.querySelector('.total-price').textContent = 'Total Price: ₹' + total.toFixed(2);
+        }
+
+        window.onload = function() {
+            const quantityInputs = document.querySelectorAll('.quantity');
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', calculateTotal);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>College Laundry Service</h1>
+        <div class="total-price">Total Price: ₹0.00</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Clothing Item</th>
+                    <th>Price per Item (₹)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Shirt</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>T-Shirt</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Jeans</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Trousers</td>
+                    <td class="price">30</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Sweater</td>
+                    <td class="price">30</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Jacket</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Skirt</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Dress</td>
+                    <td class="price">40</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Scarf</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Socks (Pair)</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Shorts</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pyjama</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Bed Sheet</td>
+                    <td class="price">40</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pillow Cover</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Towel</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Blanket</td>
+                    <td class="price">60</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="wash-button" onclick="calculateTotal()">Wash</button>
+    </div>
+</body>
+</html>

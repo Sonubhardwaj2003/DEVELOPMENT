@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Stationery Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-image: url(StationaryImage.webp);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #0e666a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #c4791e;
+            color: #fff;
+        }
+        .quantity {
+            width: 60px;
+        }
+        .pay-button {
+            background-color: #c4791e;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            float: right;
+        }
+        .total-price {
+            float: right;
+            background-color: #c4791e;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .file-upload {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function calculateTotal() {
+            const rows = document.querySelectorAll('tbody tr');
+            let total = 0;
+            rows.forEach(row => {
+                const price = parseFloat(row.querySelector('.price').textContent);
+                const quantity = parseInt(row.querySelector('.quantity').value);
+                total += price * quantity;
+            });
+            document.querySelector('.total-price').textContent = 'Total Price: ₹' + total.toFixed(2);
+        }
+
+        function addFileInput() {
+            const fileUploadDiv = document.querySelector('.file-upload');
+            const newFileInput = document.createElement('input');
+            newFileInput.type = 'file';
+            newFileInput.name = 'fileToPrint';
+            fileUploadDiv.appendChild(newFileInput);
+            fileUploadDiv.appendChild(document.createElement('br'));
+        }
+
+        window.onload = function() {
+            const quantityInputs = document.querySelectorAll('.quantity');
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', calculateTotal);
+            });
+
+            document.querySelector('.add-file-button').addEventListener('click', addFileInput);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>College Stationery Shop</h1>
+        <div class="total-price">Total Price: ₹0.00</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Notebook</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pencil</td>
+                    <td class="price">5</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Pen</td>
+                    <td class="price">10</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Eraser</td>
+                    <td class="price">5</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Ruler</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Highlighter</td>
+                    <td class="price">25</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Stapler</td>
+                    <td class="price">100</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Marker</td>
+                    <td class="price">30</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Glue Stick</td>
+                    <td class="price">25</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Folder</td>
+                    <td class="price">50</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Scissors</td>
+                    <td class="price">40</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Sticky Notes</td>
+                    <td class="price">20</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Paper Clips</td>
+                    <td class="price">15</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+                <tr>
+                    <td>Calculator</td>
+                    <td class="price">500</td>
+                    <td><input type="number" class="quantity" min="0" value="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="file-upload">
+            <label for="fileToPrint">Attach File to be Printed:</label>
+            <input type="file" id="fileToPrint" name="fileToPrint"><br>
+        </div>
+        <button class="add-file-button">Add Another File</button>
+        <button class="pay-button" onclick="calculateTotal()">Pay</button>
+    </div>
+</body>
+</html>
